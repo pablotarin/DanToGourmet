@@ -1,0 +1,1482 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/"
+     xml:base="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:DanTo_Gourmet="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet">
+        <dc:creator>Daniel Martínez Mira y Pablo Tarín</dc:creator>
+        <dc:date>16 / 11 / 2023</dc:date>
+        <dc:source>http://192.168.134.1/joomla/</dc:source>
+        <terms:creator>Daniel Martínez Mira(https://mural.uv.es/damarmi2/)
+Pablo Tarín Pérez(https://mural.uv.es/pajotape/)</terms:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#AtiendeA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#AtiendeA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Administrador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Compra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Compra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Reparte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Reparte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Dinero_Gastado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Dinero_Gastado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#HaRepartido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#HaRepartido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#IdentAdmin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#IdentAdmin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Administrador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Identificador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Identificador">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#NombreCliente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#NombreCliente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#NombreRepartidor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#NombreRepartidor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Número_de_Compras -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Número_de_Compras">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#SueldoRepartidor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#SueldoRepartidor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#descuento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#descuento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#precioDolares -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#precioDolares">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#precioMenu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#precioMenu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneAlergia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneAlergia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePrecio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePrecio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneSurtido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneSurtido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneTamaño -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneTamaño">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneTemperatura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tieneTemperatura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Administrador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Administrador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#ClienteVIP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#ClienteVIP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Antonio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Antonio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <DanTo_Gourmet:HaRepartido rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</DanTo_Gourmet:HaRepartido>
+        <DanTo_Gourmet:NombreRepartidor>Antonio</DanTo_Gourmet:NombreRepartidor>
+        <DanTo_Gourmet:SueldoRepartidor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1200.0</DanTo_Gourmet:SueldoRepartidor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Berenjenas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Berenjenas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Bravas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Bravas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Calamares -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Calamares">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:precioDolares rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.2</DanTo_Gourmet:precioDolares>
+        <DanTo_Gourmet:tieneAlergia>Pescado</DanTo_Gourmet:tieneAlergia>
+        <DanTo_Gourmet:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</DanTo_Gourmet:tienePrecio>
+        <DanTo_Gourmet:tieneSurtido>Mar</DanTo_Gourmet:tieneSurtido>
+        <DanTo_Gourmet:tieneTamaño>Mediano</DanTo_Gourmet:tieneTamaño>
+        <DanTo_Gourmet:tieneTemperatura>Caliente</DanTo_Gourmet:tieneTemperatura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#ClienteVIP"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:tienePedidos rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#PedidoAlfredo"/>
+        <DanTo_Gourmet:Dinero_Gastado rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</DanTo_Gourmet:Dinero_Gastado>
+        <DanTo_Gourmet:Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</DanTo_Gourmet:Identificador>
+        <DanTo_Gourmet:NombreCliente>Alfredo</DanTo_Gourmet:NombreCliente>
+        <DanTo_Gourmet:Número_de_Compras rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</DanTo_Gourmet:Número_de_Compras>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#ClienteVIP"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:tienePedidos rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#PedidoFran"/>
+        <DanTo_Gourmet:Dinero_Gastado rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</DanTo_Gourmet:Dinero_Gastado>
+        <DanTo_Gourmet:Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</DanTo_Gourmet:Identificador>
+        <DanTo_Gourmet:NombreCliente>Fran</DanTo_Gourmet:NombreCliente>
+        <DanTo_Gourmet:Número_de_Compras rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</DanTo_Gourmet:Número_de_Compras>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#ClienteVIP"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <DanTo_Gourmet:Dinero_Gastado rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800.0</DanTo_Gourmet:Dinero_Gastado>
+        <DanTo_Gourmet:Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</DanTo_Gourmet:Identificador>
+        <DanTo_Gourmet:Número_de_Compras rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</DanTo_Gourmet:Número_de_Compras>
+        <DanTo_Gourmet:descuento rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</DanTo_Gourmet:descuento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Ensaladilla_Rusa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Ensaladilla_Rusa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Juan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Juan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Administrador"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <DanTo_Gourmet:IdentAdmin rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</DanTo_Gourmet:IdentAdmin>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Manolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Manolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Repartidor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <DanTo_Gourmet:HaRepartido rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</DanTo_Gourmet:HaRepartido>
+        <DanTo_Gourmet:NombreRepartidor>Manolo</DanTo_Gourmet:NombreRepartidor>
+        <DanTo_Gourmet:SueldoRepartidor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800.0</DanTo_Gourmet:SueldoRepartidor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuDomingo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuDomingo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:TieneEntrante rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Nachos"/>
+        <DanTo_Gourmet:TienePostre rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#arroz_con_leche"/>
+        <DanTo_Gourmet:TienePrincipal rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#pizza_bismark"/>
+        <DanTo_Gourmet:precioMenu rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.99</DanTo_Gourmet:precioMenu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuMartes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuMartes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:TieneEntrante rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#bonito"/>
+        <DanTo_Gourmet:TienePostre rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#piña"/>
+        <DanTo_Gourmet:TienePrincipal rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#pizza_4_quesos"/>
+        <DanTo_Gourmet:precioMenu rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.99</DanTo_Gourmet:precioMenu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuSabado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuSabado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:TieneEntrante rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Bravas"/>
+        <DanTo_Gourmet:TienePostre rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#helado_de_vainilla"/>
+        <DanTo_Gourmet:TienePrincipal rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#parrillada_de_carne_argentina"/>
+        <DanTo_Gourmet:precioMenu rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.99</DanTo_Gourmet:precioMenu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuViernes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#MenuViernes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Menus"/>
+            </owl:Restriction>
+        </rdf:type>
+        <DanTo_Gourmet:TieneEntrante rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Calamares"/>
+        <DanTo_Gourmet:TienePostre rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_de_queso"/>
+        <DanTo_Gourmet:TienePrincipal rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#chuletas_con_patatas"/>
+        <DanTo_Gourmet:precioMenu rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17.99</DanTo_Gourmet:precioMenu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Nachos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Nachos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Navajas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Navajas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#PedidoAlfredo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#PedidoAlfredo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#PedidoFran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#PedidoFran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Usuario"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePedidos"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Pedido"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Provolone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Provolone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Queso_frito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Queso_frito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Sepia_en_su_tinta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Sepia_en_su_tinta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <DanTo_Gourmet:tieneAlergia>Pescado</DanTo_Gourmet:tieneAlergia>
+        <DanTo_Gourmet:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</DanTo_Gourmet:tienePrecio>
+        <DanTo_Gourmet:tieneSurtido>Mar</DanTo_Gourmet:tieneSurtido>
+        <DanTo_Gourmet:tieneTamaño>Mediano</DanTo_Gourmet:tieneTamaño>
+        <DanTo_Gourmet:tieneTemperatura>Caliente</DanTo_Gourmet:tieneTemperatura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#arroz_caldoso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#arroz_caldoso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#arroz_con_leche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#arroz_con_leche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#bonito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#bonito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TieneEntrante"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#chuletas_con_patatas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#chuletas_con_patatas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#gambas_rebozadas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#gambas_rebozadas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#gazpacho_manchego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#gazpacho_manchego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#helado_de_vainilla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#helado_de_vainilla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#helado_pitufo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#helado_pitufo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#macarrones_4_quesos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#macarrones_4_quesos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#parrillada_de_carne_argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#parrillada_de_carne_argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#pizza_4_quesos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#pizza_4_quesos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#pizza_bismark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#pizza_bismark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePrincipal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#piña -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#piña">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#red_velvet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#red_velvet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#revuelto_de_setas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#revuelto_de_setas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_chocolate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_chocolate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_de_queso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_de_queso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#TienePostre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_de_zanahoria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tarta_de_zanahoria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Plato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Postres"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Principales"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/num_c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/precio">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/aux">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/res">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/producto">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Descuento</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Número_de_Compras"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/n"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#descuento"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Cliente VIP</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Número_de_Compras"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/n"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#ClienteVIP"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Número_de_Compras"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/num_c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/num_c"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#orderByDescending"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/num_c"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePrecio"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/precio"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/precio"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/aux"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.09</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/res"/>
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/precio"/>
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/aux"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#precioDolares"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/res"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Media Precios</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#Entrantes"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/producto"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet#tienePrecio"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/producto"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/precio"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#avg"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/danie/ontologies/2023/10/DanTo_Gourmet/precio"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
